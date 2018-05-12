@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +14,12 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
+
+import { ChatService } from './services/chat.service';
+import { AuthService } from './services/auth.service';
+
+import { appRoutes } from '../routes';
+import { environment } from '../environments/environment.prod';
 
 
 @NgModule({
@@ -28,9 +36,11 @@ import { UserItemComponent } from './user-item/user-item.component';
     UserItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
