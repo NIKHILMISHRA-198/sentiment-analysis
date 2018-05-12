@@ -1,0 +1,19 @@
+.messageContainer {
+    height: auto;
+    width: 70%;
+    min-width: 300px;
+}
+.messageData {
+    margin-bottom: 15px;
+}
+.messageContent {
+    color: white;
+    padding: 18px 20px;
+    line-height: 26px;
+    font-size: 16px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    width: 90%;
+    position: relative;
+    background: #94C2ED;
+}
