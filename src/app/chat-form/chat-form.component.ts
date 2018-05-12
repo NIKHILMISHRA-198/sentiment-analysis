@@ -14,8 +14,7 @@ export class ChatFormComponent implements OnInit {
   }
 
   send() {
-    // TODO: Implement sendMessage method in the chat Service
-    // this.chat.sendMessage(this.message);
+    this.chat.sendMessage(this.message);
     this.message = '';
   }
 
