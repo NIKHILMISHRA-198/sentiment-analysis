@@ -1,0 +1,10 @@
+.mainContent {
+    height: calc(100% - 200px);
+    display: flex;
+}
+.userListWrapper {
+    flex-basis: 20%;
+}
+.feedWrapper {
+    flex-basis: 80%;
+}
