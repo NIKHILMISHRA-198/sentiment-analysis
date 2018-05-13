@@ -23,7 +23,7 @@
 
 button.btn {
     padding: 0;
-    background-color: #95c3eb;
+    background-color: #2f8e9f;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -80,4 +80,13 @@ button.btn {
 
 .icon.joy {
     background-image: url(/assets/ya.svg);
+}
+
+@media only screen and (max-width: 500px) {
+    .logo {
+        display: none;
+    }
+    .links {
+        flex-basis: 100%;
+    }
 }

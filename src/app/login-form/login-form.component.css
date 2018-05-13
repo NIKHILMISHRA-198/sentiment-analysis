@@ -47,3 +47,12 @@ button.btn {
     padding: 1em;
     width: 100%;
 }
+
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .signUpContent, .signUpForm {
+        flex-basis: 100%;
+    }
+}

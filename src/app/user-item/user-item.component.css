@@ -42,3 +42,18 @@
     margin-left: 10px;
     display: flex;
 }
+
+@media only screen and (max-width: 500px) {
+    .userItem {
+        height: 40px;
+    }
+    .icon {
+        flex-basis: 10%;
+    }
+    .userName {
+        max-width: 150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}

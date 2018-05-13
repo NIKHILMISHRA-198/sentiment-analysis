@@ -44,3 +44,13 @@
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
 }
+
+
+@media only screen and (max-width: 500px) {
+    .user-list-extend {
+        display: none;
+    }
+    .formContainer {
+        flex-basis: 100%;
+    }
+}

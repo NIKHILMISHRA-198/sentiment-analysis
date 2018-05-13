@@ -21,3 +21,19 @@
 .chatFormWrapper {
     height: 100px;
 }
+
+
+@media only screen and (max-width: 500px) {
+    .mainContent {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .userListWrapper {
+        flex-basis: 100%;
+        height: 200px;
+    }
+    .feedWrapper {
+        flex-basis: 100%;
+        height: 400px;
+    }
+}
