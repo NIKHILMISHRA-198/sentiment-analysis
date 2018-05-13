@@ -1,5 +1,12 @@
 <div class="navBar">
-  <div id="logo" class="logo" routerLink="/"></div>
+  <div id="logo" class="logo">
+    <div class="icon angry"></div>
+    <div class="icon sad"></div>
+    <div class="icon disgust"></div>
+    <div class="icon surprise"></div>
+    <div class="icon happy"></div>
+    <div class="icon happy"></div>
+  </div>
   <div class="links">
     <button class="btn" *ngIf="(user|async)?.uid" >
       <span>

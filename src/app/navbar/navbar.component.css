@@ -4,11 +4,14 @@
 }
 
 .logo {
-    flex-basis: 20%;
+    flex-basis: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .links {
-    flex-basis: 80%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -45,4 +48,36 @@ button.btn {
 .btn span a {
     text-decoration: none;
     color: white;
+}
+.icon {
+    background-image: url(/assets/haha.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0px 10px;
+    flex-basis: 7%;
+    height: 50%;
+}
+
+.icon.happy {
+    background-image: url(/assets/haha.svg);
+}
+
+.icon.angry {
+    background-image: url(/assets/angry.svg);
+}
+
+.icon.sad {
+    background-image: url(/assets/sad.svg);
+}
+
+.icon.disgust {
+    background-image: url(/assets/sad.svg);
+}
+
+.icon.surprise {
+    background-image: url(/assets/wow.svg);
+}
+
+.icon.joy {
+    background-image: url(/assets/ya.svg);
 }
