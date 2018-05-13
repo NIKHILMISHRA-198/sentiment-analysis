@@ -21,6 +21,7 @@ import { UserItemComponent } from './user-item/user-item.component';
 
 import { ChatService } from './services/chat.service';
 import { AuthService } from './services/auth.service';
+import { TensorflowService } from './services/tensorflow.service';
 
 import { appRoutes } from '../routes';
 import { environment } from '../environments/environment.prod';
@@ -48,7 +49,7 @@ import { environment } from '../environments/environment.prod';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [AuthService, ChatService],
+  providers: [AuthService, ChatService, TensorflowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
