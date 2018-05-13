@@ -43,8 +43,7 @@ export class AuthService {
                   this.authState = user;
                   const status = 'happy';
                   this.setUserData(email, displayName, status);
-                })
-                .catch(error => console.log(error));
+                });
   }
 
   setUserData(email: string, displayName: string, status: string) {

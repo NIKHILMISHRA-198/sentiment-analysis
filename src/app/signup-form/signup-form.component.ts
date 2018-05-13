@@ -23,7 +23,12 @@ export class SignupFormComponent {
     this.authService.signUp(email, password, displayName)
         .then(resolve => {
           this.router.navigate(['chat']);
+        }, reject => {
+          this.router.navigate(['signup']);
         })
-        .catch(error => this.errorMsg = error.message);
+        .catch(error => {
+          this.router.navigate(['signup']);
+          this.errorMsg = error;
+        });
   }
 }
