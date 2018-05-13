@@ -1,11 +1,11 @@
 <div class="navBar">
   <div id="logo" class="logo">
-    <div class="icon angry" [ngClass]="{'mainEmoji':mainEmoji == 'angry'}"></div>
-    <div class="icon sad" [ngClass]="{'mainEmoji':mainEmoji == 'sad'}"></div>
-    <div class="icon disgust" [ngClass]="{'mainEmoji':mainEmoji == 'disgust'}"></div>
-    <div class="icon surprise" [ngClass]="{'mainEmoji':mainEmoji == 'surprise'}"></div>
-    <div class="icon happy" [ngClass]="{'mainEmoji':mainEmoji == 'happy'}"></div>
-    <div class="icon joy" [ngClass]="{'mainEmoji':mainEmoji == 'joy'}"></div>
+    <div class="icon angry"></div>
+    <div class="icon sad"></div>
+    <div class="icon disgust"></div>
+    <div class="icon surprise"></div>
+    <div class="icon happy"></div>
+    <div class="icon joy"></div>
   </div>
   <div class="links">
     <button class="btn" *ngIf="(user|async)?.uid" >

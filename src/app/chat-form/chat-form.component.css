@@ -45,6 +45,38 @@
     transition: width 0.5s ease-in-out;
 }
 
+.tone-bar .tone-icon {
+    height: 50px;
+    width: 20px;
+    position: relative;
+    left: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: -5px;
+}
+.tone-bar .tone-icon.happy {
+    background-image: url(/assets/haha.svg);
+}
+
+.tone-bar .tone-icon.angry {
+    background-image: url(/assets/angry.svg);
+}
+
+.tone-bar .tone-icon.sad {
+    background-image: url(/assets/sad.svg);
+}
+
+.tone-bar .tone-icon.disgust {
+    background-image: url(/assets/sad.svg);
+}
+
+.tone-bar .tone-icon.surprise {
+    background-image: url(/assets/wow.svg);
+}
+
+.tone-bar .tone-icon.joy {
+    background-image: url(/assets/ya.svg);
+}
 
 @media only screen and (max-width: 500px) {
     .user-list-extend {

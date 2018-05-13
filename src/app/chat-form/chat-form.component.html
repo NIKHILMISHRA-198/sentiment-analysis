@@ -4,6 +4,7 @@
         <input id="searchFormInput" name="message" type="text" class="chatInput" [(ngModel)]="message" (keydown)="handleSubmit($event)" />
         <button class="chatButton" (click)="send()">Send</button>
         <div class="tone-bar" [style.width.%]="strength">
+            <div class="tone-icon" [ngClass]="mainEmoji"></div>
         </div>
     </div>
 </div>

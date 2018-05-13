@@ -16,6 +16,7 @@ export class ChatFormComponent implements OnInit, AfterViewInit {
   message: string;
   strength = 0;
   userId: string;
+  mainEmoji = 'sad';
 
   constructor(private chat: ChatService, private tf: TensorflowService, private authService: AuthService, private emoji: EmojiService) {
     authService.authUser().subscribe(user => {
@@ -38,7 +39,6 @@ export class ChatFormComponent implements OnInit, AfterViewInit {
     this.chat.sendMessage(this.message, this.strength.toString());
     this.authService.setUserStatusGivenId(this.emoji.getEmojiLabel(this.strength), this.userId);
     this.emoji.setMainEmoji(this.strength);
-    debugger;
     this.message = '';
     this.strength = 0;
   }
@@ -50,6 +50,7 @@ export class ChatFormComponent implements OnInit, AfterViewInit {
     }
     this.tf.getPrediction(msg).then((val) => {
       this.strength =  Math.floor( val * 100);
+      this.mainEmoji = this.emoji.getEmojiLabel(this.strength);
     });
   }
 

@@ -58,9 +58,6 @@ button.btn {
     height: 50%;
 }
 
-.icon.mainEmoji {
-}
-
 .icon.happy {
     background-image: url(/assets/haha.svg);
 }
