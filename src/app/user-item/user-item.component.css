@@ -1,0 +1,44 @@
+.userItem {
+    height: 60px;
+    display: flex;
+    color: white;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.icon {
+    flex-basis: 15%;
+    background-image: url(/assets/haha.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon.happy {
+    background-image: url(/assets/haha.svg);
+}
+
+.icon.angry {
+    background-image: url(/assets/angry.svg);
+}
+
+.icon.sad {
+    background-image: url(/assets/sad.svg);
+}
+
+.icon.disgust {
+    background-image: url(/assets/sad.svg);
+}
+
+.icon.surprise {
+    background-image: url(/assets/wow.svg);
+}
+
+.icon.joy {
+    background-image: url(/assets/ya.svg);
+}
+
+.userName {
+    align-items: center;
+    margin-left: 10px;
+    display: flex;
+}
