@@ -2,9 +2,17 @@
     height: auto;
     width: 70%;
     min-width: 300px;
+    float: right;
+}
+.messageContainer.isOwnMessageContainer{
+    float: left;
 }
 .messageData {
     margin-bottom: 15px;
+    font-size: 11px;
+}
+.messageData span{
+    margin-left: 5px;
 }
 .messageContent {
     color: white;
@@ -16,4 +24,7 @@
     width: 90%;
     position: relative;
     background: #94C2ED;
+}
+.messageContent.isOwnMessageContent {
+    background: #88b977;
 }

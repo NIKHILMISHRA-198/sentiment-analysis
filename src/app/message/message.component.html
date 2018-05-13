@@ -1,13 +1,16 @@
-<div class="messageContainer">
-  <div class="messageData">
+<div class="messageContainer" [ngClass]="{'isOwnMessageContainer':isOwnMessage}">
+  <div class="messageData" [ngClass]="{'isOwnMessageData':isOwnMessage}">
     <span class="sender">
       {{ userName }}
     </span>
     <span class="timesent">
       {{ timeSent }}
     </span>
+    <span class="strength">
+        Sentiment Score: {{ strength }}
+    </span>
   </div>
-  <div class="messageContent">
+  <div class="messageContent" [ngClass]="{'isOwnMessageContent':isOwnMessage}">
     {{ message }}
   </div>
 </div>
