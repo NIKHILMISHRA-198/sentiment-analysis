@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TensorflowService } from './services/tensorflow.service';
+import { EmojiService } from './services/emoji.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import { TensorflowService } from './services/tensorflow.service';
 })
 export class AppComponent implements OnInit {
   title = 'Sentiment Chat';
-  constructor(private tf: TensorflowService) { }
+  mainEmoji: string;
+  constructor(private tf: TensorflowService, private emoji: EmojiService) {
+    this.mainEmoji = this.emoji.getMainEmoji();
+  }
   ngOnInit() {
     if (this.tf.getModel() === null) {
       this.loadModel();

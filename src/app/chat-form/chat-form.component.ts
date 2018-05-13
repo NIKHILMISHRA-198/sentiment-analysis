@@ -37,6 +37,8 @@ export class ChatFormComponent implements OnInit, AfterViewInit {
     this.calculateStrength(this.message);
     this.chat.sendMessage(this.message, this.strength.toString());
     this.authService.setUserStatusGivenId(this.emoji.getEmojiLabel(this.strength), this.userId);
+    this.emoji.setMainEmoji(this.strength);
+    debugger;
     this.message = '';
     this.strength = 0;
   }

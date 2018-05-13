@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class EmojiService {
 
+  mainEmoji = 'happy';
   constructor() { }
   getEmojiLabel(scoreInt: number) {
     if (scoreInt >= 0 && scoreInt <= 10) {
@@ -23,6 +24,12 @@ export class EmojiService {
     if (scoreInt >= 91) {
       return 'joy';
     }
+  }
+  getMainEmoji() {
+    return this.mainEmoji;
+  }
+  setMainEmoji(scoreInt: number) {
+    this.mainEmoji = this.getEmojiLabel(scoreInt);
   }
 
 }
