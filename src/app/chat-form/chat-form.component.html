@@ -1,11 +1,9 @@
 <div class="container">
     <div class="user-list-extend"></div>
     <div class="formContainer">
-        <form>
-          <input name="message" type="text" class="chatInput" [(ngModel)]="message" (keydown)="handleSubmit($event)" />
-        </form>
+        <input id="searchFormInput" name="message" type="text" class="chatInput" [(ngModel)]="message" (keydown)="handleSubmit($event)" />
         <button class="chatButton" (click)="send()">Send</button>
-        <div class="tone-bar" ng-style="{width: message.strength + '%'}">
+        <div class="tone-bar" [style.width.%]="strength">
         </div>
     </div>
 </div>

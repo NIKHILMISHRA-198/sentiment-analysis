@@ -37,7 +37,7 @@ export class ChatService {
     return this.db.list(path);
   }
 
-  sendMessage(msg: string) {
+  sendMessage(msg: string, strength: string) {
     const timestamp = this.getTimeStamp();
     const email = this.user.email;
     this.chatMessages = this.getMessages();
@@ -45,7 +45,8 @@ export class ChatService {
       message: msg,
       timeSent: timestamp,
       userName: this.userName,
-      email: email
+      email: email,
+      strength: strength
     });
   }
 
