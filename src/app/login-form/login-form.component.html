@@ -1,3 +1,20 @@
-<p>
-  login-form works!
-</p>
+<div class="container">
+    <div class="signUpContent">
+      <h2 class="heading">Privacy Preserving Real Time Sentiment Analysis</h2>
+      <div class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce diam mi, accumsan pharetra sapien id, vehicula scelerisque erat. Duis interdum augue quam, rhoncus vulputate nisl eleifend eget. Maecenas ac quam at enim condimentum congue. Ut mattis porttitor aliquam. Proin eleifend enim at augue porttitor, quis efficitur erat aliquam. Donec ultricies sem vitae lobortis maximus. Suspendisse dapibus sem eget malesuada commodo. Ut lobortis arcu a vestibulum efficitur. Sed finibus egestas ipsum non pulvinar.
+      </div>
+    </div>
+    <div class="signUpForm">
+      <form #loginForm="ngForm">
+        <h2 class="heading">Login</h2>
+        <input type="email" name="email" placeholder="Enter your email address"
+        [(ngModel)]="email" class="formInput" maxlength="60" required/>
+        <input type="password" name="password" placeholder="Choose a password"
+        [(ngModel)]="password" class="formInput" maxlength="60" required/>
+        <button class="btn" [disabled]="!loginForm.form.valid" type="submit"
+        (click)="login()" id="btn-login">Log In</button>
+      </form>
+    </div>
+</div>
+

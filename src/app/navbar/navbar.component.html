@@ -9,12 +9,12 @@
     <span>
         <span id="userEmail" class="userEmail" *ngIf="(user|async)?.uid">{{userEmail}}</span>
     </span>
-    <button class="btn" *ngIf="!(user|async)?.uid">
+    <button class="btn" *ngIf="!(user|async)?.uid" routerLink="/signup">
       <span>
-          <a routerLink="/signup">Sign Up</a>
+          <a>Sign Up</a>
       </span>
     </button>
-   <button class="btn" *ngIf="!(user|async)?.uid">
+   <button class="btn" *ngIf="!(user|async)?.uid" routerLink="/login">
       <span>
           <a href="#" (click)="login()">Login</a>
         </span>

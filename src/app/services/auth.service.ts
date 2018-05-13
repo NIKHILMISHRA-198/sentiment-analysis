@@ -8,7 +8,7 @@ import { User } from '../models/user-model';
 
 @Injectable()
 export class AuthService {
-  user: Observable<firebase.User>;
+  user: any;
   authState: any;
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router) {

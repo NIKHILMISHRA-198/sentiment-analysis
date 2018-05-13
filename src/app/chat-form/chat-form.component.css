@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.user-list-extend {
+    flex-basis: 20%;
+    background: #444752;
+    height: 100%;
+}
+.formContainer {
+    flex-basis: 80%;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+}
+.formContainer input {
+    border: none;
+    padding: 10px 15px;
+    font: small-caption;
+    font-size: 18px;
+    font-size: 1.8rem;
+    width: calc(100% - 50px);
+    color: #34495e;
+    outline: none;
+    line-height: 1.5;
+}

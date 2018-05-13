@@ -10,7 +10,7 @@ import { ChatMessage } from '../models/chat-message.model';
 @Injectable()
 export class ChatService {
 
-  user: firebase.User;
+  user: any;
   chatMessages: AngularFireList<ChatMessage>;
   chatMessage: ChatMessage;
   userName: string;
