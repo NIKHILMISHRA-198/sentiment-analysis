@@ -15,8 +15,12 @@ export class AuthService {
       this.user = afAuth.authState;
   }
 
+  authUser() {
+    return this.user;
+  }
+
   get currentUserId(): string {
-      return this.authState !== null ? this.authState.uid : '';
+      return this.authState !== null ? this.authState.user.uid : '';
   }
 
   login(email: string, password: string) {
@@ -28,8 +32,13 @@ export class AuthService {
               });
   }
 
+  logout() {
+    this.afAuth.auth.signOut();
+    this.router.navigate(['login']);
+  }
+
   signUp(email: string, password: string, displayName: string) {
-    return this.afAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(email, password)
+    return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
                 .then((user) => {
                   this.authState = user;
                   const status = 'online';
