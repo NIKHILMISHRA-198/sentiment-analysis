@@ -65,4 +65,13 @@ export class AuthService {
     this.db.object(path).update(data)
         .catch(error => console.log(error));
   }
+
+  setUserStatusGivenId(status: string, userId: string) {
+    const path = `users/${userId}`;
+    const data = {
+      status: status
+    };
+    this.db.object(path).update(data)
+        .catch(error => console.log(error));
+  }
 }

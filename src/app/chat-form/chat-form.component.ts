@@ -1,5 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ChatService } from '../services/chat.service';
+import { AuthService } from '../services/auth.service';
+import { EmojiService } from '../services/emoji.service';
 import { TensorflowService } from '../services/tensorflow.service';
 import { Observable } from 'rxjs/Observable';
 import { fromEvent } from 'rxjs/observable/fromEvent';
@@ -13,8 +15,13 @@ import { debounceTime, map } from 'rxjs/operators';
 export class ChatFormComponent implements OnInit, AfterViewInit {
   message: string;
   strength = 0;
+  userId: string;
 
-  constructor(private chat: ChatService, private tf: TensorflowService) { }
+  constructor(private chat: ChatService, private tf: TensorflowService, private authService: AuthService, private emoji: EmojiService) {
+    authService.authUser().subscribe(user => {
+      this.userId = user.uid;
+    });
+  }
 
   ngOnInit() {
   }
@@ -29,6 +36,7 @@ export class ChatFormComponent implements OnInit, AfterViewInit {
   send() {
     this.calculateStrength(this.message);
     this.chat.sendMessage(this.message, this.strength.toString());
+    this.authService.setUserStatusGivenId(this.emoji.getEmojiLabel(this.strength), this.userId);
     this.message = '';
     this.strength = 0;
   }
