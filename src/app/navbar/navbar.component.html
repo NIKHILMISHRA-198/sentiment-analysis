@@ -1,18 +1,23 @@
 <div class="navBar">
-    <div id="logo"></div>
-    <div id="heading"><a routerLink="/">basechat</a></div>
+  <div id="logo" class="logo" routerLink="/"></div>
   <div class="links">
+    <button class="btn" *ngIf="(user|async)?.uid" >
+      <span>
+          <a href="#" (click)="logout()">Logout</a>
+      </span>
+    </button>
     <span>
-      <a *ngIf="!(user|async)?.uid" href="#" (click)="login()">Login</a>
+        <span id="userEmail" class="userEmail" *ngIf="(user|async)?.uid">{{userEmail}}</span>
     </span>
-    <span>
-      <a *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
-    </span>
-    <span>
-      <span id="userEmail" *ngIf="(user|async)?.uid">Hello, {{userEmail}}</span>
-    </span>
-    <span>
-      <a *ngIf="(user|async)?.uid" href="#" (click)="logout()">Logout</a>
-    </span>
+    <button class="btn" *ngIf="!(user|async)?.uid">
+      <span>
+          <a routerLink="/signup">Sign Up</a>
+      </span>
+    </button>
+   <button class="btn" *ngIf="!(user|async)?.uid">
+      <span>
+          <a href="#" (click)="login()">Login</a>
+        </span>
+      </button>
   </div>
 </div>

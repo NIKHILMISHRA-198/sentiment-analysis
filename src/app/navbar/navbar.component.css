@@ -1,0 +1,48 @@
+.navBar {
+    display: flex;
+    height: 100%;
+}
+
+.logo {
+    flex-basis: 20%;
+}
+
+.links {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.links button {
+    margin: 0px 10px;
+}
+
+button.btn {
+    padding: 0;
+    background-color: #95c3eb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn span {
+    white-space: nowrap;
+    display: block;
+    position: relative;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+
+.btn span {
+    text-shadow: rgba(29, 111, 165, 0.9) 0 0 2px;
+}
+
+.btn span a {
+    text-decoration: none;
+    color: white;
+}
